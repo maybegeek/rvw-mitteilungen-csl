@@ -307,8 +307,7 @@
 
 <macro name="citation-locator">
   <group>
-    <label variable="locator" form="short"/>
-    <text variable="locator" prefix=" "/>
+    <text variable="locator"/>
   </group>
 </macro>
 
@@ -326,7 +325,7 @@
     </if>
     <else>
       <text macro="author-short"/>
-      <group delimiter=", ">
+      <group delimiter=":">
         <text macro="issued-year"/>
         <text macro="citation-locator"/>
       </group>
