@@ -2,8 +2,8 @@
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="de-DE">
 
   <info>
-    <title>ur-magnum-opus</title>
-    <title-short>ur-magnum-opus</title-short>
+    <title>rvw-mitteilungen</title>
+    <title-short>rvw-mitteilungen</title-short>
     <id>https://github.com/maybegeek/rvw-mitteilungen-csl</id>
     <link href="https://github.com/maybegeek/rvw-mitteilungen-csl" rel="self"/>
     <link href="https://github.com/maybegeek/rvw-mitteilungen-csl/README.md" rel="documentation"/>
