@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="de-DE">
+
+  <info>
+    <title>ur-magnum-opus</title>
+    <title-short>ur-magnum-opus</title-short>
+    <id>https://github.com/maybegeek/rvw-mitteilungen-csl</id>
+    <link href="https://github.com/maybegeek/rvw-mitteilungen-csl" rel="self"/>
+    <link href="https://github.com/maybegeek/rvw-mitteilungen-csl/README.md" rel="documentation"/>
+    <author>
+      <name>Christoph Pfeiffer</name>
+      <email>christoph.pfeiffer@ur.de</email>
+    </author>
+    <category citation-format="author-date"/>
+    <category field="humanities" />
+    <updated>2017-01-08T10:34:33+01:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/4.0/">CC (BY-SA 4.0)</rights>
+  </info>
