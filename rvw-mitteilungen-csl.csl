@@ -21,6 +21,9 @@
     <terms>
       <term name="et-al">et al.</term>
       <term name="retrieved">Zugriff</term>
+      <term name="anonymous" form="short">o. A.</term>
+      <term name="no date" form="short">o. J.</term>
+      <term name="editor" form="short">Hg.</term>
     </terms>
   </locale>
 
