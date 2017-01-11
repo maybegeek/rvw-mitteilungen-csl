@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="de-DE">
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.1" demote-non-dropping-particle="sort-only" default-locale="de-DE">
 
   <info>
     <title>rvw-mitteilungen</title>
@@ -13,7 +13,7 @@
     </author>
     <category citation-format="author-date"/>
     <category field="humanities" />
-    <updated>2017-01-08T10:34:33+01:00</updated>
+    <updated>2017-01-12T00:26:14+01:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/4.0/">CC (BY-SA 4.0)</rights>
   </info>
 
@@ -286,7 +286,7 @@
   </group>
 </if>
 <else-if type="bill book graphic legal_case motion_picture report song chapter paper-conference" match="any">
-  <group prefix=" (" suffix=")" delimiter=", ">
+  <group prefix=". " suffix="" delimiter=", ">
     <text macro="edition"/>
     <group>
       <text term="volume" form="long" plural="true" text-case="capitalize-first" suffix=" "/>
@@ -363,11 +363,11 @@
         <text variable="dimensions" prefix=". " />
       </if>
     </choose>
-    <text macro="locators"/>
     <group delimiter=", " prefix=". ">
       <text macro="event"/>
       <text macro="publisher"/>
     </group>
+    <text macro="locators"/>
     <!--
     Zotero: Angabe spezieller Medieninformationen (Film): [dimensions, medium].
      -->
@@ -405,11 +405,11 @@
           <text variable="dimensions" prefix=". " />
         </if>
       </choose>
-      <text macro="locators"/>
       <group delimiter=", " prefix=". ">
         <text macro="event"/>
         <text macro="publisher"/>
       </group>
+      <text macro="locators"/>
         <!--
         Zotero: Angabe spezieller Medieninformationen (Film): [dimensions, medium].
          -->
