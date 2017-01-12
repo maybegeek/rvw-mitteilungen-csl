@@ -114,6 +114,13 @@
 </choose>
 </macro>
 
+<macro name="series">
+<group font-style="normal" prefix=" (= " suffix=")">
+  <text variable="collection-title" />
+  <text variable="collection-number" prefix=", "/>
+</group>
+</macro>
+
 <macro name="title">
 <choose>
 <if type="report thesis" match="any">
@@ -123,12 +130,12 @@
     <text variable="number" prefix=" No. "/>
   </group>
 </if>
-<else-if type="bill book graphic legislation motion_picture report song webpage chapter" match="any">
+<else-if type="book" match="any">
+  <text variable="title" font-style="italic"/>
+  <text macro="series" />
+</else-if>
+<else-if type="bill graphic legislation motion_picture report song webpage chapter" match="any">
   <text variable="title" />
-  <group font-style="italic" prefix=" (= " suffix=")">
-    <text variable="collection-title" />
-    <text variable="collection-number" prefix=", "/>
-  </group>
 </else-if>
 <else>
   <text variable="title"/>
@@ -395,16 +402,16 @@
         <group>
           <text macro="container-contributors"/>
           <text macro="secondary-contributors"/>
-          <group delimiter=", ">
+          <group delimiter=" ">
             <text variable="container-title" font-style="italic"/>
+            <choose>
+            <if variable="container-title" match="any">
+            <text macro="series" />
+            </if>
+            </choose>
           </group>
         </group>
       </group>
-      <choose>
-        <if variable="note">
-          <text variable="note" prefix=". " />
-        </if>
-      </choose>
       <choose>
         <if variable="dimensions">
           <text variable="dimensions" prefix=". " />
