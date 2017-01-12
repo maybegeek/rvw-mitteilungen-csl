@@ -27,9 +27,9 @@
     </terms>
   </locale>
 
-  <macro name="container-contributors">
+<macro name="container-contributors">
 <choose>
-<if type="chapter paper-conference" match="any">
+<if type="chapter paper-conference article-journal" match="any">
   <text term="in" text-case="capitalize-first" suffix=": "/>
   <names variable="editor translator" suffix=". " >
     <!--<name and="symbol" initialize="false" delimiter="," delimiter-precedes-last="never">-->
