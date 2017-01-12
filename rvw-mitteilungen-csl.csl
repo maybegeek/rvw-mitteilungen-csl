@@ -401,6 +401,11 @@
         </group>
       </group>
       <choose>
+        <if variable="note">
+          <text variable="note" prefix=". " />
+        </if>
+      </choose>
+      <choose>
         <if variable="dimensions">
           <text variable="dimensions" prefix=". " />
         </if>
