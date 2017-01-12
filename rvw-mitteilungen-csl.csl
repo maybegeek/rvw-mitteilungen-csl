@@ -405,12 +405,13 @@
           <group delimiter=" ">
             <text variable="container-title" font-style="italic"/>
             <choose>
-            <if variable="container-title" match="any">
-            <text macro="series" />
-            </if>
+              <if variable="container-title" match="any">
+                <text macro="series" />
+              </if>
             </choose>
           </group>
         </group>
+        <text variable="note" />
       </group>
       <choose>
         <if variable="dimensions">
