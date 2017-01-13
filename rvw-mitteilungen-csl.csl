@@ -10,11 +10,13 @@
     <author>
       <name>Christoph Pfeiffer</name>
       <email>christoph.pfeiffer@ur.de</email>
+      <uri>https://github.com/maybegeek/</uri>
     </author>
     <category citation-format="author-date"/>
     <category field="humanities" />
     <category field="generic-base" />
     <summary>Zitationsstil für die Mitteilungen des Regensburger Verbunds für Werbeforschung (RVW)</summary>
+    <issn>2198-0500</issn>
     <updated>2017-01-12T00:26:14+01:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/4.0/">This work is licensed under a Creative Commons Attributio-ShareAlike 4.0 License (CC BY-SA 4.0)</rights>
   </info>
@@ -117,7 +119,7 @@
 </macro>
 
 <macro name="series">
-<group font-style="normal" prefix=" (= " suffix=")">
+<group font-style="normal" prefix=" (=&#8202;" suffix=")">
   <text variable="collection-title" />
   <text variable="collection-number" prefix=", "/>
 </group>
