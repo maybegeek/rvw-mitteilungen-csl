@@ -93,6 +93,22 @@
 
 <macro name="access">
 <choose>
+<if type="webpage">
+  <choose>
+    <if variable="URL">
+      <text value="URL: "/>
+      <text variable="URL" suffix=""/>
+      <group prefix=" – " delimiter=" " suffix="">
+        <text value="Zugriff:"/>
+        <date variable="accessed">
+          <date-part name="day" form="numeric-leading-zeros" suffix="."/>
+          <date-part name="month" suffix="." form="numeric-leading-zeros"/>
+          <date-part name="year" form="long"/>
+        </date>
+      </group>
+    </if>
+  </choose>
+</if>
 <if type="article-newspaper" match="none">
   <choose>
   <if variable="DOI">
@@ -106,9 +122,9 @@
       <group>
         <text value="Zugriff:" prefix="– " suffix=" "/>
         <date variable="accessed">
-          <date-part name="day" suffix="."/>
-          <date-part name="month" form="numeric" suffix="."/>
-          <date-part name="year" suffix=""/>
+          <date-part name="day" form="numeric-leading-zeros" suffix="."/>
+          <date-part name="month" suffix="." form="numeric-leading-zeros"/>
+          <date-part name="year" form="long"/>
         </date>
       </group>
     </group>
