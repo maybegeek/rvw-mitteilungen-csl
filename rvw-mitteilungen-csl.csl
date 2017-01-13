@@ -100,7 +100,7 @@
     <group delimiter=" ">
       <text variable="URL"/>
       <group>
-        <text value="Zugriff:" prefix="-- " suffix=" "/>
+        <text value="Zugriff:" prefix="– " suffix=" "/>
         <date variable="accessed">
           <date-part name="day" suffix="."/>
           <date-part name="month" form="numeric" suffix="."/>
