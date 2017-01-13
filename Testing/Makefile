@@ -1,6 +1,6 @@
 MEXT  := md
 SRC   := $(wildcard Inhalt.$(MEXT))
-BIB   := ../r-v-w.bib
+BIB   := r-v-w.bib
 CSL   := ../rvw-mitteilungen-csl.csl
 
 PDFS=$(SRC:.md=.pdf)
