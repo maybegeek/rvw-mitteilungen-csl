@@ -284,10 +284,10 @@
 <macro name="locators">
 <choose>
 <if type="article-journal article-magazine article-newspaper" match="any">
-  <group prefix=". " delimiter=", ">
+  <group prefix=", " delimiter=". ">
     <group>
-      <text variable="volume" prefix="Jg. " />
-      <text variable="issue" prefix=" (" suffix=")"/>
+      <text variable="volume" prefix="" />
+      <text variable="issue" prefix="(" suffix=")"/>
     </group>
     <text variable="page" prefix="S. "/>
   </group>
