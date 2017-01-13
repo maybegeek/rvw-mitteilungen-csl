@@ -242,7 +242,7 @@
   </group>
 </if>
 <else>
-  <text prefix=" (" term="no date" suffix="):" form="short"/>
+  <text prefix=" (" term="no date" suffix=")" form="short"/>
 </else>
 </choose>
 </macro>
