@@ -150,7 +150,7 @@
     <text variable="number" prefix=" No. "/>
   </group>
 </if>
-<else-if type="book" match="any">
+<else-if type="book webpage" match="any">
   <text variable="title" font-style="italic"/>
   <text macro="series" />
 </else-if>
