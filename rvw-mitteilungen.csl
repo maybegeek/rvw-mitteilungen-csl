@@ -17,7 +17,7 @@
     <category field="generic-base" />
     <summary>Zitationsstil für die Mitteilungen des Regensburger Verbunds für Werbeforschung (RVW)</summary>
     <issn>2198-0500</issn>
-    <updated>2017-01-12T00:26:14+01:00</updated>
+    <updated>2017-01-15T23:53:25+01:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/4.0/">This work is licensed under a Creative Commons Attributio-ShareAlike 4.0 License (CC BY-SA 4.0)</rights>
   </info>
 
@@ -109,7 +109,7 @@
     </if>
   </choose>
 </if>
-<if type="article-newspaper" match="none">
+<else-if type="article-newspaper" match="none">
   <choose>
   <if variable="DOI">
     <text value="doi:"/>
@@ -130,7 +130,7 @@
     </group>
   </else-if>
   </choose>
-</if>
+</else-if>
 </choose>
 </macro>
 
@@ -194,6 +194,7 @@
   </group>
 </if>
 <else>
+<!-- from @misc (bibtex) bib2json -> no-type
   <choose>
   <if variable="event" match="none">
     <choose>
@@ -209,6 +210,7 @@
     </choose>
   </if>
   </choose>
+-->
   <group delimiter=": ">
     <text variable="publisher-place"/>
     <text variable="publisher"/>
