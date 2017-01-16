@@ -375,7 +375,7 @@
   <choose>
   <if type="motion_picture">
     <group suffix=".">
-    <text macro="title" font-variant="small-caps" />
+    <text macro="title" />
     <text macro="issued" suffix=" "/>
     <group delimiter=". ">
     <text macro="author" suffix=""/>
