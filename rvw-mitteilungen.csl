@@ -91,44 +91,51 @@
 </names>
 </macro>
 
+<macro name="zugriff">
+  <text value="Zugriff:" prefix="– " suffix=" "/>
+  <date variable="accessed">
+    <date-part name="day" form="numeric-leading-zeros" suffix="."/>
+    <date-part name="month" suffix="." form="numeric-leading-zeros"/>
+    <date-part name="year" form="long"/>
+  </date>
+</macro>
+
 <macro name="access">
 <choose>
 <if type="webpage">
   <choose>
     <if variable="URL">
       <text value="URL: "/>
-      <text variable="URL" suffix=""/>
-      <group prefix=" – " delimiter=" " suffix="">
-        <text value="Zugriff:"/>
-        <date variable="accessed">
-          <date-part name="day" form="numeric-leading-zeros" suffix="."/>
-          <date-part name="month" suffix="." form="numeric-leading-zeros"/>
-          <date-part name="year" form="long"/>
-        </date>
+      <group delimiter=" ">
+        <text variable="URL"/>
+        <group>
+          <text macro="zugriff"/>
+        </group>
       </group>
     </if>
   </choose>
 </if>
-<else-if type="article-newspaper" match="none">
+<else-if type="article-newspaper motion_picture" match="any">
   <choose>
   <if variable="DOI">
-    <text value="doi:"/>
-    <text variable="DOI"/>
+    <text value="DOI: "/>
+    <group delimiter=" ">
+      <text variable="DOI"/>
+    </group>
   </if>
   <else-if variable="URL">
-    <text value="URL:" suffix=" "/>
+    <text value="URL: "/>
     <group delimiter=" ">
       <text variable="URL"/>
-      <group>
-        <text value="Zugriff:" prefix="– " suffix=" "/>
-        <date variable="accessed">
-          <date-part name="day" form="numeric-leading-zeros" suffix="."/>
-          <date-part name="month" suffix="." form="numeric-leading-zeros"/>
-          <date-part name="year" form="long"/>
-        </date>
-      </group>
     </group>
   </else-if>
+  </choose>
+  <choose>
+    <if variable="DOI URL" match="any">
+      <group prefix=" ">
+        <text macro="zugriff"/>
+      </group>
+    </if>
   </choose>
 </else-if>
 </choose>
