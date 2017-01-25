@@ -119,7 +119,7 @@
     </if>
   </choose>
 </if>
-<else-if type="article-newspaper motion_picture" match="any">
+<else-if type="article-newspaper article-journal motion_picture" match="any">
   <choose>
   <if variable="DOI">
     <text value="DOI: "/>
