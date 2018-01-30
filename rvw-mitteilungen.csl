@@ -21,7 +21,7 @@
     <category field="generic-base" />
     <summary>Zitationsstil für die Mitteilungen des Regensburger Verbunds für Werbeforschung (RVW)</summary>
     <issn>2198-0500</issn>
-    <updated>2017-01-23T12:53:47+01:00</updated>
+    <updated>2018-01-30T12:17:47+01:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/4.0/">This work is licensed under a Creative Commons Attributio-ShareAlike 4.0 License (CC BY-SA 4.0)</rights>
   </info>
 
@@ -315,34 +315,39 @@
 </macro>
 
 <macro name="locators">
-<choose>
-<if type="article-journal article-magazine article-newspaper" match="any">
-  <group prefix=", " delimiter=". ">
-    <group>
-      <text variable="volume" prefix="" />
-      <text variable="issue" prefix="(" suffix=")"/>
-    </group>
-    <text variable="page" prefix="S. "/>
-  </group>
-</if>
-<else-if type="bill book graphic legal_case motion_picture report song chapter paper-conference" match="any">
-  <group prefix=". " suffix="" delimiter=", ">
-    <text macro="edition"/>
-    <group>
-      <text term="volume" form="long" plural="true" text-case="capitalize-first" suffix=" "/>
-      <number variable="number-of-volumes" form="numeric" prefix="1-"/>
-    </group>
-    <group>
-      <text term="volume" form="long" text-case="capitalize-first" suffix=" "/>
-      <number variable="volume" form="numeric"/>
-    </group>
-    <group>
-      <label variable="page" form="short" suffix=" "/>
-      <text variable="page"/>
-    </group>
-  </group>
-</else-if>
-</choose>
+    <choose>
+      <!-- Zeitschriftenartikel -->
+      <!-- Band und Heft-Nr vorhanden: "#/#", nur Heft: ", Heft " -->
+      <if type="article-journal">
+        <choose>
+          <if variable="volume" match="none">
+            <text variable="issue" prefix=", Heft "/>
+          </if>
+          <else>
+            <text variable="volume" prefix=" "/>
+            <text variable="issue" prefix="/"/>
+          </else>
+        </choose>
+        <text variable="page" prefix=", S.&#8201;"/>
+      </if>
+      <else-if type="legal_case">
+        <text variable="volume" prefix=", "/>
+        <text variable="container-title" prefix=" "/>
+        <text variable="page" prefix=" S. "/>
+      </else-if>
+      <else-if type="bill book graphic legal_case motion_picture report song chapter" match="any">
+        <group prefix=". " delimiter=". ">
+          <group>
+            <text term="volume" form="short" text-case="capitalize-first" suffix=" "/>
+            <number variable="volume" form="numeric"/>
+          </group>
+          <group>
+            <number variable="number-of-volumes" form="numeric"/>
+            <text term="volume" form="short" prefix=" " plural="true"/>
+          </group>
+        </group>
+      </else-if>
+    </choose>
 </macro>
 
 <macro name="citation-locator">
