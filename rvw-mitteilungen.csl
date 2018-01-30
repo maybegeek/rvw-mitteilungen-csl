@@ -21,7 +21,7 @@
     <category field="generic-base" />
     <summary>Zitationsstil für die Mitteilungen des Regensburger Verbunds für Werbeforschung (RVW)</summary>
     <issn>2198-0500</issn>
-    <updated>2018-01-30T15:50:47+01:00</updated>
+    <updated>2018-01-30T16:18:47+01:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/4.0/">This work is licensed under a Creative Commons Attributio-ShareAlike 4.0 License (CC BY-SA 4.0)</rights>
   </info>
 
@@ -32,6 +32,7 @@
       <term name="anonymous" form="short">o. A.</term>
       <term name="no date" form="short">o. J.</term>
       <term name="editor" form="short">Hg.</term>
+      <term name="issue">Heft</term>
     </terms>
   </locale>
 
@@ -321,7 +322,8 @@
       <if type="article-journal">
         <choose>
           <if variable="volume" match="none">
-            <text variable="issue" prefix=", Heft "/>
+            <text term="issue" prefix=", " suffix="&#8201;"/>
+            <text variable="issue"/>
           </if>
           <else>
             <text variable="volume" prefix=" "/>
@@ -333,7 +335,7 @@
       <else-if type="legal_case">
         <text variable="volume" prefix=", "/>
         <text variable="container-title" prefix=" "/>
-        <text variable="page" prefix=" S. "/>
+        <text variable="page" prefix=" S.&#8201;"/>
       </else-if>
       <else-if type="bill book graphic legal_case motion_picture report song chapter" match="any">
         <group prefix=". " delimiter=". ">
