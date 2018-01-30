@@ -21,7 +21,7 @@
     <category field="generic-base" />
     <summary>Zitationsstil für die Mitteilungen des Regensburger Verbunds für Werbeforschung (RVW)</summary>
     <issn>2198-0500</issn>
-    <updated>2018-01-30T12:17:47+01:00</updated>
+    <updated>2018-01-30T13:17:47+01:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/4.0/">This work is licensed under a Creative Commons Attributio-ShareAlike 4.0 License (CC BY-SA 4.0)</rights>
   </info>
 
@@ -52,7 +52,7 @@
 
 <macro name="secondary-contributors">
 <choose>
-<if type="chapter paper-conference" match="none">
+<if type="chapter paper-conference article-journal" match="none">
   <names variable="editor translator" delimiter=", " prefix=" (" suffix=")">
     <name and="symbol" initialize="false" delimiter=", " delimiter-precedes-last="never"/>
     <label form="short" prefix=", " text-case="capitalize-first"/>
