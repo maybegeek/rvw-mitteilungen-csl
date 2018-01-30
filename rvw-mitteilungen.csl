@@ -21,7 +21,7 @@
     <category field="generic-base" />
     <summary>Zitationsstil für die Mitteilungen des Regensburger Verbunds für Werbeforschung (RVW)</summary>
     <issn>2198-0500</issn>
-    <updated>2018-01-30T13:17:47+01:00</updated>
+    <updated>2018-01-30T15:50:47+01:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/4.0/">This work is licensed under a Creative Commons Attributio-ShareAlike 4.0 License (CC BY-SA 4.0)</rights>
   </info>
 
@@ -40,8 +40,8 @@
 <if type="chapter paper-conference article-journal" match="any">
   <text term="in" text-case="capitalize-first" suffix=": "/>
   <names variable="editor translator" suffix=". " >
-    <!--<name and="symbol" initialize="false" delimiter="," delimiter-precedes-last="never">-->
-    <name name-as-sort-order="all" and="symbol" sort-separator=", " initialize="false" delimiter="; " delimiter-precedes-last="never">
+    <!--<name and="symbol" delimiter="," delimiter-precedes-last="never">-->
+    <name name-as-sort-order="all" and="symbol" sort-separator=", " delimiter="; " delimiter-precedes-last="never">
       <name-part name="family" font-variant="normal"/>
     </name>
     <label form="short" prefix=" (" text-case="capitalize-first" suffix=")"/>
@@ -54,7 +54,7 @@
 <choose>
 <if type="chapter paper-conference article-journal" match="none">
   <names variable="editor translator" delimiter=", " prefix=" (" suffix=")">
-    <name and="symbol" initialize="false" delimiter=", " delimiter-precedes-last="never"/>
+    <name and="symbol" delimiter=", " delimiter-precedes-last="never"/>
     <label form="short" prefix=", " text-case="capitalize-first"/>
   </names>
 </if>
@@ -63,7 +63,7 @@
 
 <macro name="author">
 <names variable="author">
-  <name name-as-sort-order="all" and="symbol" sort-separator=", " initialize="false" delimiter="; " delimiter-precedes-last="never">
+  <name name-as-sort-order="all" and="symbol" sort-separator=", " delimiter="; " delimiter-precedes-last="never">
     <name-part name="family" font-variant="normal"/>
   </name>
   <label form="short" prefix=" (" suffix=".)" text-case="capitalize-first" strip-periods="true"/>
